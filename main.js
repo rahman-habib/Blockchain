@@ -173,12 +173,5 @@ class Blockchain{
         return true; 
     }
 }
-let habib=new Blockchain();
-habib.createAccount({email:"habib@gmail.com",pass:"12345"});
-habib.createAccount({email:"ali@gmail.com",pass:"12345"});
-habib.minPendingTransection("habib@gmail.com");
-habib.addTransaction(new Transection("habib@gmail.com","ali@gmail.com",10));
-habib.addTransaction(new Transection("ali@gmail.com","habib@gmail.com",5));
-habib.minPendingTransection("ali@gmail.com");
-console.log("balance = "+habib.getBalenceofAddress("habib@gmail.com"));
-console.log(JSON.stringify(habib,null,4).toString());
+module.exports.Blockchain=Blockchain;
+module.exports.Transaction=Transaction;
